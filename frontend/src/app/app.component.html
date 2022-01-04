@@ -1,0 +1,53 @@
+<mat-toolbar> 
+	<a href="/"><img src="/assets/img/Light.png" width="90px"></a>
+	<hr class="vertical" />
+	<h2>Visualización Integraciones Front</h2>
+</mat-toolbar>
+<mat-sidenav-container>
+	<mat-sidenav class="mat-elevation-z8">
+		<a class="aHome" href="/">Inicio</a><br><br>
+		<a class="aHome" href="/cajita">Cajita</a><br>
+		&nbsp;&nbsp;- <a href="/cajitaUnique">Pagos Únicos</a><br>
+		&nbsp;&nbsp;- <a href="/cajitaCardAsync">WebPay</a><br>
+		&nbsp;&nbsp;- <a href="/cajitaSubs">Recurrencias</a><br>
+		<a class="aHome" href="/kajita">Kajita</a><br>
+		&nbsp;&nbsp;- <a href="/kajitaUnique">Pagos Únicos</a><br>
+		&nbsp;&nbsp;- <a href="/kajitaSubs">Recurrencias</a><br>
+		<a class="aHome" href="/kushkijs">Kushki.js</a><br>
+		&nbsp;&nbsp;<!--<img src="/assets/img/Tarjeta_blk.svg" width="17px">-->-&nbsp;<span class="foot">Tarjetas</span><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsCard">Pagos Únicos</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsOnDemand">Pagos Bajo Demanda</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsSubs">Recurrencias</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsCardAsync">WebPay</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsOnDemandCA">Bajo Demanda WebPay Plus</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsSubsCA">Recurrencias WebPay Plus</a><br>
+		&nbsp;&nbsp;<!--<img src="/assets/img/Banco_blk.svg" width="17px">-->-&nbsp;<span class="foot">Transferencia</span><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsPSE">Colombia</a><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsTransfer">Otros Países</a><br>
+		&nbsp;&nbsp;<!--<img src="/assets/img/Efectivo_blk.svg" width="17px">-->-&nbsp;<span class="foot">Efectivo</span><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="/kushkijsCash">Pagos Únicos</a><br><br>
+		<span class="foot">Visita nuestra documentación</span><br>
+		&nbsp;-&nbsp;<a href="https://docs.kushki.com/" target="_blank" onmouseover="document.getElementById('alton').src='/assets/img/ext_link.png';" onmouseout="document.getElementById('alton').src='/assets/img/transparent.png';">Alto Nivel</a>&nbsp;<img src="/assets/img/transparent.png" width="12px" id="alton"><br>
+		&nbsp;-&nbsp;<a href="https://api-docs.kushkipagos.com/api-reference" target="_blank" onmouseover="document.getElementById('refapi').src='/assets/img/ext_link.png';" onmouseout="document.getElementById('refapi').src='/assets/img/transparent.png';">Refrencia API</a>&nbsp;<img src="/assets/img/transparent.png" width="12px" id="refapi"><br>
+		&nbsp;-&nbsp;<a href="https://api-docs.kushkipagos.com/kushki-libraries" target="_blank" onmouseover="document.getElementById('libs').src='/assets/img/ext_link.png';" onmouseout="document.getElementById('libs').src='/assets/img/transparent.png';">Librerías</a>&nbsp;<img src="/assets/img/transparent.png" width="12px" id="libs"><br><br>
+		<span class="foot">Estado de nuestros servicios</span><br>
+		&nbsp;-&nbsp;<a href="https://status.kushkipagos.com" target="_blank" onmouseover="document.getElementById('status').src='/assets/img/ext_link.png';" onmouseout="document.getElementById('status').src='/assets/img/transparent.png';">Status</a>&nbsp;<img src="/assets/img/transparent.png" width="12px" id="status">
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<div class="content mat-elevation-z8">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
+<section class="footer">
+	<table>
+		<tr>
+			<td align="center">
+				<span class="foot">Sales Engineering Team |&nbsp;</span><a href="https://www.kushki.com" class="aFooter" target="_blank">Kushki Pagos</a><span class="foot">&nbsp;| &#169; 2021 - 2022</span>
+			</td>
+			<td>
+				<div class="myDiv" align="right"><img src="/assets/img/Horizontal_White.svg" width="150px"></div>
+			</td>
+		</tr>
+	</table>
+</section>

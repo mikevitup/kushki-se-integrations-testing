@@ -1,0 +1,40 @@
+<h1>Kushki.js</h1>
+<h2 class="myH2">- Subscripciones Calendarizadas con WebPay Plus -</h2>
+<!--<form id="payment-form" method="post">
+    <label>Correo electrónico*: </label>
+    <input placeholder="Correo electrónico" type="text" id="email" name="email" required><br><br>
+    <div align="center"><input type="submit" id="button" value="Registrar tarjeta"></div>
+</form>-->
+<table class="myTable">
+  <tr>
+    <th>Formulario</th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td>
+        <form id="payment-form" method="post">
+            <label>Correo electrónico*: </label>
+            <input placeholder="Correo electrónico" type="text" id="email" name="email" required><br><br>
+            <div align="center"><input type="submit" id="button" value="Registrar tarjeta"></div>
+        </form>
+    </td>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'javascript'">
+            const kushki = new Kushki({
+        merchantId: '{Public-Merchant-Id}', //Llave Pública
+        inTestEnvironment: true
+    });
+    kushki.requestSubscriptionCardAsyncToken({
+        currency: 'CLP',
+        callbackUrl: 'https://www.domain.com/return',
+        email: email,
+    }, (response) => {
+        if (response.token != null) {
+            //Envíar Token a Backend
+        };
+});
+      </textarea>
+    </td>
+  </tr>
+</table>
+<br><br><br><br><br>

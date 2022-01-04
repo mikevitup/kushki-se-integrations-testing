@@ -1,0 +1,26 @@
+<h1>Kajita</h1>
+<p>El uso de <span class="remark">Kajita</span> como librería de FrontEnd asegura que la información sensible de los pagadores, específicamente los datos de Tarjetas de Crédito, sea tratada, procesada, y transmitida de forma segura sin que esta información pase por los servidores del Comercio; reduciendo así el Scope PCI del Comercio.</p>
+<p><span class="note">Nota:</span> El diseño de los formularios generados por <span class="remark">Kajita</span> es mínimamente modificable, se puede editar el diseño global y los colores, sin embargo la estructura se encuentra predefinida por Kushki.</p>
+<h4>Implementación de la Librería</h4>
+<textarea highlight-js [options]="{}" [lang]="'html'">
+	<script src="https://cdn.kushkipagos.com/kushki-checkout.js"></script>
+</textarea>
+<textarea highlight-js [options]="{}" [lang]="'html'">
+	<form id="my-form" action="/confirm" method="post">
+    	<input type="hidden" name="cart_id" value="123">
+	</form>
+</textarea>
+<table class="myTable">
+	<tr>
+		<th><img src="/assets/img/Cajita.svg" width="20px">&nbsp;&nbsp;<a href="/kajitaUnique" class="aHome">Pagos Únicos</a></th>
+		<th><img src="/assets/img/Cajita.svg" width="20px">&nbsp;&nbsp;<a href="/kajitaSubs" class="aHome">Recurrencias</a></th>
+	</tr>
+	<tr>
+		<td>Cajita para <span class="remark">Pagos Únicos</span> presenta los campos necesarios para que el Comercio obtenga el Token requerido para complementar el flujo de generación del cobro</td>
+		<td>Cajita para <span class="remark">Suscripciones Calendarizadas</span> presenta los campos necesarios para que el Comercio obtenga el Token requerido para complementar el flujo de creación de Suscripción</td>
+	</tr>
+	<tr>
+		<td align="center"><a href="/kajitaUnique"><img src="/assets/img/kajita_unique.png" height="350px"></a></td>
+		<td align="center"><a href="/kajitaSubs"><img src="/assets/img/kajita_subs.png" height="350px"></a></td>
+	</tr>
+</table>

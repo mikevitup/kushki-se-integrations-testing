@@ -1,0 +1,46 @@
+<h1>Kushki.js</h1>
+<h2 class="myH2">- Pago Único con WebPay -</h2>
+<!--<form id="payment-form" method="post">
+    <label>Correo electrónico*: </label>
+    <input placeholder="Correo electrónico" type="text" id="email" name="email" required><br><br>
+    <label>Descripción*: </label>
+    <input placeholder="Descripción del pago" type="text" id="description" name="description" required><br><br>
+    <div align="center"><input type="submit" id="button" value="Pagar CLP$500"></div>
+</form>-->
+<table class="myTable">
+  <tr>
+    <th>Formulario</th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td>
+        <form id="payment-form" method="post">
+            <label>Correo electrónico*: </label>
+            <input placeholder="Correo electrónico" type="text" id="email" name="email" required><br><br>
+            <label>Descripción*: </label>
+            <input placeholder="Descripción del pago" type="text" id="description" name="description" required><br><br>
+            <div align="center"><input type="submit" id="button" value="Pagar CLP$500"></div>
+        </form>
+    </td>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'javascript'">
+            const kushki = new Kushki({
+        merchantId: '{Public-Merchant-Id}', //Llave Pública
+        inTestEnvironment: true
+    });
+    kushki.requestCardAsyncToken({
+        totalAmount: 500,
+        currency: 'CLP',
+        returnUrl: 'https://www.domain.com/return',
+        email: email,
+        description: description,
+    }, (response) => {
+        if (response.token != null) {
+            //Envíar Token a Backend
+        };
+});
+      </textarea>
+    </td>
+  </tr>
+</table>
+<br><br><br>

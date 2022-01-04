@@ -1,0 +1,44 @@
+<h1>Kajita</h1>
+<h2 class="myH2">- Pagos Únicos -</h2>
+<!--<div align="center">
+    <form id="my-form" action="http://localhost:3000/confirm" method="post">
+        <input type="hidden" name="cart_id" value="123">
+    </form>
+</div>-->
+<table class="myTable">
+  <tr>
+    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formulario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td rowspan="2">
+        <form id="my-form" action="http://localhost:3000/confirm" method="post">
+            <input type="hidden" name="cart_id" value="123">
+        </form>
+    </td>
+    <td>Formulario:
+      <textarea highlight-js [options]="{}" [lang]="'html'">
+         <form id="my-form" action="/confirm" method="post">
+    <input type="hidden" name="cart_id" value="123">
+</form>
+      </textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'javascript'">
+          var kushki = new KushkiCheckout({
+    kformId: "{kformId}", //Kajita ID
+    form: "my-form",
+    publicMerchantId: "{Public-Merchant-Id}", //Llave Pública
+    inTestEnvironment: true,
+    amount: {
+      subtotalIva: 0,
+      iva: 0,
+      subtotalIva0: 50000,
+    }
+});
+      </textarea>
+    </td>
+  </tr>
+</table>

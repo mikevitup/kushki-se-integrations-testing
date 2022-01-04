@@ -1,0 +1,103 @@
+<h1>Kushki.js</h1>
+<h2 class="myH2">- Pago Único con Transferencia PSE -</h2>
+<!--<form id="payment-form" method="post">
+    <label>Banco*: </label>
+    <select id="bankId" required>
+    </select><br><br>
+	<label>Nombres y Apellidos*: </label>
+    <input placeholder="Nombres y Apellidos" type="text" id="name" name="name" required><br><br>
+    <label>Tipo de Documento*: </label>
+    <select id="documentType" name="documentType" required>
+        <option selected>Por favor seleccione su Tipo de Documento</option>
+        <option value="CC">- CC - Cédula de Ciudadanía</option>
+        <option value="CE">- CE - Cédula de Extranjería</option>
+        <option value="NIT">- NIT - Número de Identificación Tributaria</option>
+        <option value="TI">- TI - Tarjeta de Identidad</option>
+        <option value="PP">- PP - Pasaporte</option>
+        <option value="IDC">- IDC - Identificador Único de Cliente</option>
+        <option value="CEL">- CEL - Número de Teléfono Móvil</option>
+        <option value="RC">- RC - Registro Civil de Nacimiento</option>
+        <option value="DE">- DE - Documento de Identificación Extranjero</option>
+    </select><br><br>
+    <label>Número de Documento*: </label>
+    <input placeholder="Número de documento" type="text" id="documentNumber" name="documentNumber" required><br><br>
+    <label>Tipo de Persona*: </label>
+    <select id="userType" name="userType" required>
+        <option value="0" selected>Persona Natural</option>
+        <option value="1">Persona Legal</option>
+    </select><br><br>
+    <label>Correo electrónico*: </label>
+    <input placeholder="Email" type="text" id="email" name="Email" required><br><br>
+    <label>Descripción*: </label>
+    <input placeholder="Descripción" type="text" id="description" name="description" required><br><br>
+    <div align="center"><input type="submit" id="button" value="Pagar COP$50000"></div>
+</form>-->
+<table class="myTable">
+  <tr>
+    <th>Formulario</th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td>
+        <form id="payment-form" method="post">
+            <label>Banco*: </label>
+            <select id="bankId" required>
+            </select><br><br>
+            <label>Nombres y Apellidos*: </label>
+            <input placeholder="Nombres y Apellidos" type="text" id="name" name="name" required><br><br>
+            <label>Tipo de Documento*: </label>
+            <select id="documentType" name="documentType" required>
+                <option selected>Por favor seleccione su Tipo de Documento</option>
+                <option value="CC">- CC - Cédula de Ciudadanía</option>
+                <option value="CE">- CE - Cédula de Extranjería</option>
+                <option value="NIT">- NIT - Número de Identificación Tributaria</option>
+                <option value="TI">- TI - Tarjeta de Identidad</option>
+                <option value="PP">- PP - Pasaporte</option>
+                <option value="IDC">- IDC - Identificador Único de Cliente</option>
+                <option value="CEL">- CEL - Número de Teléfono Móvil</option>
+                <option value="RC">- RC - Registro Civil de Nacimiento</option>
+                <option value="DE">- DE - Documento de Identificación Extranjero</option>
+            </select><br><br>
+            <label>Número de Documento*: </label>
+            <input placeholder="Número de documento" type="text" id="documentNumber" name="documentNumber" required><br><br>
+            <label>Tipo de Persona*: </label>
+            <select id="userType" name="userType" required>
+                <option value="0" selected>Persona Natural</option>
+                <option value="1">Persona Legal</option>
+            </select><br><br>
+            <label>Correo electrónico*: </label>
+            <input placeholder="Email" type="text" id="email" name="Email" required><br><br>
+            <label>Descripción*: </label>
+            <input placeholder="Descripción" type="text" id="description" name="description" required><br><br>
+            <div align="center"><input type="submit" id="button" value="Pagar COP$50000"></div>
+        </form>
+    </td>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'javascript'">
+            const kushki = new Kushki({
+        merchantId: '{Public-Merchant-Id}', //Llave Pública
+        inTestEnvironment: true
+    });
+    kushki.requestTransferToken({
+        bankId: bankId,
+        userType: userType,
+        documentType: documentType,
+        documentNumber: documentNumber,
+        currency: 'COP',
+        callbackUrl: 'https://www.domain.com/return',
+        email: email,
+        paymentDescription: description,
+        amount: {
+            subtotalIva: 0,
+            subtotalIva0: 50000,
+            iva: 0,
+        },
+    }, (response) => {
+        if (response.token != null) {
+            //Enviar Token a Backend
+        };
+});
+      </textarea>
+    </td>
+  </tr>
+</table>

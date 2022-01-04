@@ -1,0 +1,79 @@
+<h1>Kushki.js</h1>
+<h2 class="myH2">- Pagos Únicos con Transferencia -</h2>
+<!--<form id="payment-form" method="post">
+    <label>Banco (Opcional): </label>
+    <select id="bankId">
+    	<option selected>Por favor selecione su banco</option>
+    </select><br><br>
+	<label>Nombres y Apellidos*: </label>
+    <input placeholder="Nombres y Apellidos" type="text" id="name" name="name" required><br><br>
+    <label>RUT*: </label>
+    <input placeholder="Número de documento" type="text" id="documentNumber" name="documentNumber" required><br><br>
+    <label>Tipo de Persona (Opcional): </label>
+    <select id="userType" name="userType">
+    	<option selected>Por favor seleccione el Tipo de Persona</option>
+        <option value="0">Persona Natural</option>
+        <option value="1">Persona Legal</option>
+    </select><br><br>
+    <label>Correo electrónico*: </label>
+    <input placeholder="Email" type="text" id="email" name="Email" required><br><br>
+    <label>Descripción*: </label>
+    <input placeholder="Descripción" type="text" id="description" name="description" required><br><br>
+    <div align="center"><input type="submit" id="button" value="Pagar CLP$500"></div>
+</form>-->
+<table class="myTable">
+  <tr>
+    <th>Formulario</th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td>
+        <form id="payment-form" method="post">
+            <label>Banco (Opcional): </label>
+            <select id="bankId">
+                <option selected>Por favor selecione su banco</option>
+            </select><br><br>
+            <label>Nombres y Apellidos*: </label>
+            <input placeholder="Nombres y Apellidos" type="text" id="name" name="name" required><br><br>
+            <label>RUT*: </label>
+            <input placeholder="Número de documento" type="text" id="documentNumber" name="documentNumber" required><br><br>
+            <label>Tipo de Persona (Opcional): </label>
+            <select id="userType" name="userType">
+                <option selected>Por favor seleccione el Tipo de Persona</option>
+                <option value="0">Persona Natural</option>
+                <option value="1">Persona Legal</option>
+            </select><br><br>
+            <label>Correo electrónico*: </label>
+            <input placeholder="Email" type="text" id="email" name="Email" required><br><br>
+            <label>Descripción*: </label>
+            <input placeholder="Descripción" type="text" id="description" name="description" required><br><br>
+            <div align="center"><input type="submit" id="button" value="Pagar CLP$500"></div>
+        </form>
+    </td>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'javascript'">
+            const kushki = new Kushki({
+    merchantId: '{Public-Merchant-Id}', //Llave Pública
+    inTestEnvironment: true
+});
+kushki.requestTransferToken({
+    documentType: 'RUT',
+    documentNumber: documentNumber,
+    currency: 'CLP',
+    callbackUrl: 'https://www.domain.com/return',
+    email: email,
+    paymentDescription: description,
+    amount: {
+        subtotalIva: 0,
+        subtotalIva0: 500,
+        iva: 0,
+    },
+}, (response) => {
+    if (response.token != null) {
+        //Enviar Token a Backend
+    };
+});
+      </textarea>
+    </td>
+  </tr>
+</table>

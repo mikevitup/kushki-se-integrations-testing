@@ -1,0 +1,84 @@
+<h1>Backend response</h1>
+<h2 class="myH2">- Pagos Únicos -</h2>
+<table class="myTable">
+  <tr>
+    <th>Formulario</th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td style="width: 259px; vertical-align:top">
+      <h3>El token generado<br>y capturado en backend es:</h3>
+      <h3><b><code>{{tokenResponse.token}}</code></b></h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</p>
+    </td>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'json'">
+{
+    "token": "{{tokenResponse.token}}",
+    "amount": {
+        "subtotalIva": 0,
+        "subtotalIva0": 22000,
+        "ice": 0,
+        "iva": 0,
+        "currency": "COP"
+    },
+    "metadata": {
+        "contractID": "157AB"
+    },
+    "contactDetails": {
+        "documentType": "CC",
+        "documentNumber": "1009283738",
+        "email": "test@test.com",
+        "firstName": "Diego",
+        "lastName": "Cadena",
+        "phoneNumber": "+593988734644"
+    },
+    "orderDetails": {
+        "siteDomain": "tuebook.com",
+        "shippingDetails": {
+            "name": "Diego Cadena",
+            "phone": "+593988734644",
+            "address": "Eloy Alfaro 139 y Catalina Aldaz",
+            "city": "Quito",
+            "region": "Pichincha",
+            "country": "Ecuador",
+            "zipCode": "170402"
+        },
+        "billingDetails": {
+            "name": "Diego Cadena",
+            "phone": "+593988734644",
+            "address": "Eloy Alfaro 139 y Catalina Aldaz",
+            "city": "Quito",
+            "region": "Pichincha",
+            "country": "Ecuador",
+            "zipCode": "170402"
+        }
+    },
+    "productDetails": {
+        "product": [
+            {
+                "id": "198952AB",
+                "title": "eBook Digital Services",
+                "price": 6990000,
+                "sku": "10101042",
+                "quantity": 1
+            },
+            {
+                "id": "198953AB",
+                "title": "eBook Virtual Selling",
+                "price": 9990000,
+                "sku": "004834GQ",
+                "quantity": 1
+            }
+        ]
+    },
+    "fullResponse": true
+}
+      </textarea>
+    </td>
+  </tr>
+</table>

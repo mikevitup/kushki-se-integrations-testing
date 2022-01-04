@@ -1,0 +1,29 @@
+<h1>Cajita</h1>
+<p>El uso de <span class="remark">Cajita</span> como librería de FrontEnd asegura que la información sensible de los pagadores, específicamente los datos de Tarjetas de Crédito, sea tratada, procesada, y transmitida de forma segura sin que esta información pase por los servidores del Comercio; reduciendo así el Scope PCI del Comercio.</p>
+<p><span class="note">Nota:</span> El diseño de los formularios generados por <span class="remark">Cajita</span>, para cada medio de pago, es predefinido por Kushki y no puede ser modificado ni en estructura, ni en contenido.</p>
+<h4>Implementación de la Librería</h4>
+<textarea highlight-js [options]="{}" [lang]="'html'">
+	<script src="https://cdn.kushkipagos.com/kushki-checkout.js"></script>
+</textarea>
+<textarea highlight-js [options]="{}" [lang]="'html'">
+	<form id="payment-form" action="/confirm" method="post">
+   		<input type="hidden" name="cart_id" value="123">
+	</form>
+</textarea>
+<table class="myTable">
+	<tr>
+		<th><img src="/assets/img/Cajita.svg" width="20px">&nbsp;&nbsp;<a href="/cajitaUnique" class="aHome">Pagos Únicos</a></th>
+		<th><img src="/assets/img/Cajita.svg" width="20px">&nbsp;&nbsp;<a href="/cajitaCardAsync" class="aHome">WebPay</a></th>
+		<th><img src="/assets/img/Cajita.svg" width="20px">&nbsp;&nbsp;<a href="/cajitaSubs" class="aHome">Recurrencias</a></th>
+	</tr>
+	<tr>
+		<td>Cajita para <span class="remark">Pagos Únicos</span> presenta los campos necesarios para que el Comercio obtenga el Token requerido para complementar el flujo de generación del cobro</td>
+		<td>Cajita para <span class="remark">Pago Único con WebPay</span> presenta los campos necesarios para que el Comercio obtegna el Token requerido para complemntar el flujo de pago y generar el enlace correspondiente</td>
+		<td>Cajita para <span class="remark">Suscripciones Calendarizadas</span> presenta los campos necesarios para que el Comercio obtenga el Token requerido para complementar el flujo de creación de Suscripción</td>
+	</tr>
+	<tr>
+		<td align="center"><a href="/cajitaUnique"><img src="/assets/img/cajita_unique.png" height="350px"></a></td>
+		<td align="center"><a href="/cajitaCardAsync"><img src="/assets/img/cajita_wp.png" height="350px"></a></td>
+		<td align="center"><a href="/cajitaSubs"><img src="/assets/img/cajita_subs.png" height="350px"></a></td>
+	</tr>
+</table>

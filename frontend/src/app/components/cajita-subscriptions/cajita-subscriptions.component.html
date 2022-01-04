@@ -1,0 +1,43 @@
+<h1>Cajita</h1>
+<h2 class="myH2">- Suscripciones Calendarizadas -</h2>
+<!--<form id="payment-form" action="http://localhost:3000/confirm" method="post">
+   <input type="hidden" name="cart_id" value="123">
+</form>-->
+<table class="myTable">
+  <tr>
+    <th>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formulario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </th>
+    <th>Implementación</th>
+  </tr>
+  <tr>
+    <td rowspan="2">
+      <form id="payment-form" action="http://localhost:3000/confirmSubscriptions" method="post">
+        <input type="hidden" name="cart_id" value="123">
+      </form>
+    </td>
+    <td>Formulario:
+      <textarea highlight-js [options]="{}" [lang]="'html'">
+         <form id="payment-form" action="/confirm" method="post">
+   <input type="hidden" name="cart_id" value="123">
+</form>
+      </textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Script:
+      <textarea highlight-js [options]="{}" [lang]="'javascript'">
+          var kushki = new KushkiCheckout({
+  form: "payment-form",
+  merchant_id: "{Public-Merchant-Id}", //Llave Pública
+  amount: 50000,
+  currency: "COP",
+  payment_methods:["credit-card"],
+  inTestEnvironment: true,
+  is_subscription: true
+});
+      </textarea>
+    </td>
+  </tr>
+</table>
+<br><br>
