@@ -9,11 +9,11 @@ document
     var expirationMonth = document.getElementById("expirationMonth").value;
     var expirationYear = document.getElementById("expirationYear").value;
     const kushki = new Kushki({
-      merchantId: 'd22d3935caf346df9cee6168eacaa0c3',
+      merchantId: '24ba5dd69e3e44b09511b29fa6b98c29',
       inTestEnvironment: true
     });
     kushki.requestSubscriptionToken({
-      currency: "COP",
+      currency: "CLP",
       card: {
         name: name,
         number: number,
